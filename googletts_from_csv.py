@@ -14,7 +14,8 @@ def synthesize_text(text, output_file, voice, language_code):
     )
     # Set the audio file type
     audio_config = texttospeech.AudioConfig(
-        audio_encoding=texttospeech.AudioEncoding.LINEAR16
+        audio_encoding=texttospeech.AudioEncoding.LINEAR16,
+        sample_rate_hertz=32000
     )
     # Perform the text-to-speech request
     response = client.synthesize_speech(
